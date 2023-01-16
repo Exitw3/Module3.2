@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+body{
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to right, #333999, #ff00cc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card, .register-card{
+  width: 450px;
+  background: rgba(255, 255, 255,.5);
+  padding: 4em;
+  border-radius: 10px;
+  position: relative;
+}
+
+.login-card::before,
+.register-card::before{
+  content: '';
+  position: absolute;
+  background: rgba(255,255,255,.15);
+  inset: 0;
+  transform: rotate(-5deg);
+  z-index: -1;
+}
+
+.login-card-logo{
+  margin-bottom: 1rem;
+}
+
+.login-card-logo img{
+  width: 150px;
+}
+
+.login-card-logo,
+.login-card-header,
+.login-card-footer,
+.register-card-header,
+.register-card-footer
+{
+  text-align: center;
+}
+
+.login-card a,
+.register-card a{
+  text-decoration: none;
+  color: #35339a;
+}
+
+.login-card a:hover,
+.register-card a:hover{
+  text-decoration: underline;
+}
+
+.login-card-header, .register-card-header{
+  margin-bottom: 2rem;
+}
+
+.login-card-header h1,
+.register-card-header h1{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.login-card-header h1 + div,
+.register-card-header h1 + div{
+  font-size: calc(1rem * .8);
+  opacity: .8;
+}
+
+.login-card-form,
+.register-card-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.login-card-form .form-item,
+.register-card-form .form-item{
+  position: relative;
+}
+
+.form-item .show-password{
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  color: #8f819b;
+  cursor: pointer;
+}
+
+.login-card-form .form-item .form-item-icon,
+.register-card-form .form-item .form-item-icon{
+  position: absolute;
+  top:.82rem;
+  left:1.4rem;
+  font-size:1.3rem;
+  opacity: .4;
+}
+
+.login-card-form .checkbox{
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.login-card-form .form-item-other{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(1rem *.8);
+  margin-bottom: .5rem;
+}
+
+.login-card-footer,
+.register-card-footer{
+  margin-top: 1.5rem;
+  font-size: calc(1rem *.8);
+}
+
+.login-card input[type="text"],
+.login-card input[type="password"],
+.login-card input[type="email"],
+.register-card input[type="text"],
+.register-card input[type="password"],
+.register-card input[type="email"],
+.register-card input[type="date"]{
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255,.3);
+  padding: 1rem 1rem;
+  padding-left: calc(1rem*3.5);
+  border-radius: 100px;
+  width: 100%;
+  /* transition: background 5s; */
+}
+
+.login-card input:focus{
+  background-color: white;
+}
+
+.login-card input[type="checkbox"]{
+  width: 16px;
+  height: 16px;
+  accent-color: black;
+}
+
+.login-card-form button,
+.register-card-form button{
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* transition: background .5s; */
+}
+
+.login-card-form button:hover,
+.register-card-form button:hover{
+  background-color: rgba(0, 0, 0, .85);
+  cursor: pointer;
+}
+
+@media(max-width:768px){
+  body{padding: 2rem 0;}
+  .login-card{
+    width: 300px;
+    padding: 2rem;
+  }
+
+  @import url('https://rsms.me/inter/inter-ui.css');
+
+  ::selection {
+    background: #2D2F36;
+  }
+
+  ::-webkit-selection {
+    background: #2D2F36;
+  }
+
+  ::-moz-selection {
+    background: #2D2F36;
+  }
+
+  body {
+    background: white;
+    font-family: 'Inter UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .page {
+    background: #e2e2e5;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 40px);
+    position: absolute;
+    place-content: center;
+    width: calc(100% - 40px);
+  }
+
+  @media (max-width: 767px) {
+    .page {
+      height: auto;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .container {
+    display: flex;
+    height: 320px;
+    margin: 0 auto;
+    width: 640px;
+  }
+
+  @media (max-width: 767px) {
+    .container {
+      flex-direction: column;
+      height: 630px;
+      width: 320px;
+    }
+  }
+
+  .left {
+    background: white;
+    height: calc(100% - 40px);
+    top: 20px;
+    position: relative;
+    width: 50%;
+  }
+
+  @media (max-width: 767px) {
+    .left {
+      height: 100%;
+      left: 20px;
+      width: calc(100% - 40px);
+      max-height: 270px;
+    }
+  }
+
+  .login {
+    font-size: 50px;
+    font-weight: 900;
+    margin: 50px 40px 40px;
+  }
+
+  .eula {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 40px;
+  }
+
+  .right {
+    background: #474A59;
+    box-shadow: 0px 0px 40px 16px rgba(0, 0, 0, 0.22);
+    color: #F1F1F2;
+    position: relative;
+    width: 50%;
+  }
+
+  @media (max-width: 767px) {
+    .right {
+      flex-shrink: 0;
+      height: 100%;
+      width: 100%;
+      max-height: 350px;
+    }
+  }
+
+  svg {
+    position: absolute;
+    width: 320px;
+  }
+
+  path {
+    fill: none;
+    stroke: url(#linearGradient);
+  ;
+    stroke-width: 4;
+    stroke-dasharray: 240 1386;
+  }
+
+  .form {
+    margin: 40px;
+    position: absolute;
+  }
+
+  label {
+    color: #c2c2c5;
+    display: block;
+    font-size: 14px;
+    height: 16px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  input {
+    background: transparent;
+    border: 0;
+    color: #f2f2f2;
+    font-size: 20px;
+    height: 30px;
+    line-height: 30px;
+    outline: none !important;
+    width: 100%;
+  }
+
+  input::-moz-focus-inner {
+    border: 0;
+  }
+
+  #submit {
+    color: #707075;
+    margin-top: 40px;
+    transition: color 300ms;
+  }
+
+  #submit:focus {
+    color: #f2f2f2;
+  }
+
+  #submit:active {
+    color: #d0d0d2;
+  }
+}
